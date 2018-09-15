@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/mpbauer/zhaw-issue-tracker-server/config"
-	"github.com/mpbauer/zhaw-issue-tracker-server/models"
+	"github.com/mpbauer/hackzurich-2018-drugify-server/config"
+	"github.com/mpbauer/hackzurich-2018-drugify-server/models"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"github.com/mpbauer/zhaw-issue-tracker-server/handlers"
+	"github.com/mpbauer/hackzurich-2018-drugify-server/handlers"
 	log "github.com/sirupsen/logrus"
 	"github.com/gin-gonic/gin/binding"
-	"github.com/mpbauer/zhaw-issue-tracker-server/validators"
+	"github.com/mpbauer/hackzurich-2018-drugify-server/validators"
 )
 
 var conf = config.Config{}
