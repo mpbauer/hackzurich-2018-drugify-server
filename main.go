@@ -40,6 +40,7 @@ func main() {
 		api.GET("/drugs/:swissMedicId", apiHandler.FindDrug)
 		api.GET("/users/:userId/drugs", apiHandler.GetFullDrugHistoryItemsHandler)
 		api.POST("/users/:userId/drugs", apiHandler.CreateDrugHistoryItemHandler)
+		api.GET("/users/:userId/drugs/:swissMedicId", apiHandler.HasConflict)
 	}
 
 	// configure default route handler

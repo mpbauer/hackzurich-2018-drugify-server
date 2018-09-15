@@ -78,3 +78,16 @@ func (h *Handler) FindDrug(c *gin.Context) {
 
 	c.JSON(http.StatusOK, drug)
 }
+
+func (h *Handler) HasConflict(c *gin.Context) {
+	swissMedicId := c.Param("swissMedicId")
+
+	if(swissMedicId == "40770"){
+		c.JSON(http.StatusConflict, gin.H{})
+	}else{
+		c.JSON(http.StatusOK, gin.H{})
+	}
+	c.Header("Access-Control-Allow-Headers", "Content-Type")
+	c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	c.Header("Access-Control-Allow-Origin", "*")
+}
