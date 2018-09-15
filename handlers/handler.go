@@ -27,6 +27,10 @@ func (h *Handler) CreateDrugHistoryItemHandler(c *gin.Context) {
 		return
 	}
 
+	c.Header("Access-Control-Allow-Headers", "Content-Type")
+	c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	c.Header("Access-Control-Allow-Origin", "*")
+
 	c.JSON(http.StatusCreated, drugHistory)
 }
 
@@ -40,6 +44,9 @@ func (h *Handler) GetFullDrugHistoryItemsHandler(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{})
 		return
 	}
+	c.Header("Access-Control-Allow-Headers", "Content-Type")
+	c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	c.Header("Access-Control-Allow-Origin", "*")
 
 	c.JSON(http.StatusOK, drugHistoryItems)
 }
@@ -64,6 +71,10 @@ func (h *Handler) FindDrug(c *gin.Context) {
 			return
 		}
 	}
+
+	c.Header("Access-Control-Allow-Headers", "Content-Type")
+	c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	c.Header("Access-Control-Allow-Origin", "*")
 
 	c.JSON(http.StatusOK, drug)
 }
