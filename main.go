@@ -9,6 +9,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/mpbauer/hackzurich-2018-drugify-server/validators"
+	"github.com/gin-contrib/cors"
 )
 
 var conf = config.Config{}
@@ -30,6 +31,7 @@ func init() {
 func main() {
 
 	router := gin.Default()
+	router.Use(cors.Default())
 
 	binding.Validator = new(validators.DefaultV9Validator)
 

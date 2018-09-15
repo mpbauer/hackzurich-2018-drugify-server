@@ -11,7 +11,7 @@ docker build -t drugify-server .
 
 Make sure to start a Mongo DB container like this (the name is important!)
 ````
-docker run -d --name mongo -v mongo_data:/etc/mongo mongo:4
+docker run -d --name mongo -p 27017:27017 -v mongo_data:/etc/mongo mongo:4
 ````
 
 After the Mongo DB is up and running start the `drugify-server` application

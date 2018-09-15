@@ -1,6 +1,6 @@
 FROM golang:1.10 as build-stage
 WORKDIR /go/src/github.com/mpbauer/hackzurich-2018-drugify-server/
-RUN go get -d -v github.com/BurntSushi/toml gopkg.in/mgo.v2 github.com/sirupsen/logrus github.com/gin-gonic/gin gopkg.in/go-playground/validator.v9
+RUN go get -d -v github.com/BurntSushi/toml gopkg.in/mgo.v2 github.com/sirupsen/logrus github.com/gin-gonic/gin gopkg.in/go-playground/validator.v9 github.com/gin-contrib/cors
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
