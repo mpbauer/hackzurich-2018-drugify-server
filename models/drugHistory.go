@@ -6,7 +6,7 @@ import (
 )
 
 type DrugHistory struct {
-	ID		   string    `bson:"_id,omitempty" json:"id"`
+	ID         string    `bson:"_id,omitempty" json:"id"`
 	Username   string    `bson:"username" json:"username"`
 	Title      string    `bson:"title" json:"title"`
 	AuthHolder string    `bson:"authHolder" json:"authHolder"`
@@ -15,6 +15,8 @@ type DrugHistory struct {
 	AuthNrs    string    `bson:"authNrs" json:"authNrs"`
 	CreatedAt  time.Time `bson:"createdAt" json:"createdAt"`
 	UpdatedAt  time.Time `bson:"updatedAt" json:"updatedAt"`
+	FromDate   string    `bson:"fromDate" json:"fromDate"`
+	ToDate     string    `bson:"toDate" json:"toDate"`
 }
 
 // Get all drug history items
