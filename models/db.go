@@ -3,7 +3,7 @@ package models
 import (
 	"gopkg.in/mgo.v2"
 	"log"
-	"github.com/mpbauer/zhaw-issue-tracker-server/errorhandling"
+	"github.com/mpbauer/hackzurich-2018-drugify-server/errorhandling"
 )
 
 const (
